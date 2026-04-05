@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Static Pulse — Visual Agency Demo</title>
+    <meta
+      name="description"
+      content="Image-heavy one-page creative studio demo with minimal copy, bold tiles, and full-width photography."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a href="#top" class="brand">
+          <span class="brand-name">STATIC PULSE</span>
+          <span class="brand-tag">WE BUILD VISUAL MOMENTUM.</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="site-nav" id="siteNav">
+          <a href="#top">HOME</a>
+          <a href="#services">SERVICES</a>
+          <a href="#work">WORK</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">CONTACT</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <div class="hero-logo">
+            <div class="signal-mark">
+              <span class="signal-ring"></span>
+              <span class="signal-core">s</span>
+              <span class="signal-rays"></span>
+            </div>
+            <div class="hero-wordmark">
+              <span class="hero-main">static</span>
+              <span class="hero-sub">PULSE</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-light" id="services">
+        <div class="container">
+          <h1 class="section-title centered">WE SHAPE LOUD VISUALS.</h1>
+
+          <div class="service-grid">
+            <a class="service-card card-brand" href="#contact">
+              <span>BRAND<br />SYSTEMS</span>
+            </a>
+            <a class="service-card card-print" href="#contact">
+              <span>PRINT<br />RUNS</span>
+            </a>
+            <a class="service-card card-signs" href="#contact">
+              <span>SIGNAGE</span>
+            </a>
+            <a class="service-card card-web" href="#contact">
+              <span>WEB</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="band band-city" id="work">
+        <div class="band-image"></div>
+        <div class="band-overlay"></div>
+        <div class="band-label">SARNIA // REMOTE</div>
+      </section>
+
+      <section class="section section-light statement">
+        <div class="container statement-grid">
+          <div class="statement-left">
+            <h2 class="section-title italic">WE STAY FOCUSED&nbsp;&nbsp;|</h2>
+          </div>
+          <div class="statement-right">
+            <p>
+              Brand direction. Print. Signage. Digital launch pieces.
+              Minimal words. Strong contrast. Fast read.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="band band-print">
+        <div class="band-image"></div>
+        <div class="band-overlay"></div>
+        <div class="band-label">WE KEEP IT MOVING</div>
+      </section>
+
+      <section class="section section-light signup" id="contact">
+        <div class="container signup-inner">
+          <h2 class="section-title centered">LIKE CLEAN WORK?</h2>
+          <h3 class="signup-subtitle">GET THE NEXT DROP</h3>
+          <p class="signup-copy">
+            Occasional updates. New launches. Fresh work.
+          </p>
+
+          <form class="signup-form" id="signupForm">
+            <input type="text" name="firstName" placeholder="First Name" />
+            <input type="text" name="lastName" placeholder="Last Name" />
+            <input type="email" name="email" placeholder="Email Address" required />
+            <button type="submit">SIGN UP</button>
+          </form>
+
+          <p class="privacy-note">We respect your inbox.</p>
+          <p class="form-success" id="formSuccess"></p>
+        </div>
+      </section>
+
+      <section class="section section-light faq" id="faq">
+        <div class="container">
+          <div class="faq-grid">
+            <div class="faq-intro">
+              <h2 class="section-title italic">SHORT ANSWERS&nbsp;&nbsp;|</h2>
+            </div>
+            <div class="faq-items">
+              <details>
+                <summary>Turnaround?</summary>
+                <p>Depends on scope. Fast concepts. Cleaner rollouts.</p>
+              </details>
+              <details>
+                <summary>What do you build?</summary>
+                <p>Brand pieces, print assets, sign visuals, lean web pages.</p>
+              </details>
+              <details>
+                <summary>Can this become a client demo?</summary>
+                <p>Yes. Swap the words, imagery, links, and inquiry target.</p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-mark">
+          <div class="footer-icon">s</div>
+        </div>
+
+        <div class="footer-contact">
+          <p>Static Pulse</p>
+          <p>142 Cromwell Street</p>
+          <p>Sarnia, ON</p>
+          <p>hello@staticpulse.ca</p>
+        </div>
+
+        <div class="footer-hours">
+          <p>Mon 10–5</p>
+          <p>Tue 10–5</p>
+          <p>Wed 10–5</p>
+          <p>Thu 12–8</p>
+          <p>Fri 10–5</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
