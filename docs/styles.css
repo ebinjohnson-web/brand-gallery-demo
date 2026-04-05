@@ -2,9 +2,10 @@
   --bg: #efeee8;
   --bg-soft: #f6f5f0;
   --text: #111111;
-  --muted: #575757;
+  --muted: #4c4c4c;
   --white: #ffffff;
   --line: rgba(17, 17, 17, 0.16);
+  --line-strong: rgba(17, 17, 17, 0.34);
   --accent: #cd5a46;
   --shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
   --container: 1340px;
@@ -94,7 +95,7 @@ img {
 }
 
 .brand-tag {
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   color: var(--accent);
   font-weight: 600;
   white-space: nowrap;
@@ -103,11 +104,11 @@ img {
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 30px;
 }
 
 .site-nav a {
-  font-size: 0.78rem;
+  font-size: 0.84rem;
   font-weight: 600;
 }
 
@@ -149,7 +150,7 @@ img {
 
 .hero-bg {
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.24), rgba(0, 0, 0, 0.38)),
+    linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.34)),
     url("https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1800&q=80");
   background-size: cover;
   background-position: center;
@@ -158,28 +159,37 @@ img {
 
 .hero-overlay {
   background:
-    radial-gradient(circle at 70% 62%, rgba(255, 111, 58, 0.28), transparent 16%),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.5));
+    radial-gradient(circle at 68% 60%, rgba(255, 111, 58, 0.22), transparent 15%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.42));
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
   min-height: calc(100vh - var(--header-h));
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.hero-logo-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-inline: 4vw;
 }
 
 .hero-logo {
   display: flex;
   align-items: flex-end;
-  gap: clamp(18px, 2vw, 32px);
-  transform: translateY(-2vh);
+  gap: clamp(14px, 1.7vw, 28px);
+  transform: translate(-3vw, 2vh) scale(0.84);
+  transform-origin: center;
 }
 
 .signal-mark {
   position: relative;
-  width: clamp(88px, 12vw, 170px);
+  width: clamp(84px, 11vw, 150px);
   aspect-ratio: 1;
   display: grid;
   place-items: center;
@@ -197,7 +207,7 @@ img {
   z-index: 1;
   color: var(--white);
   font-family: "Barlow Condensed", sans-serif;
-  font-size: clamp(4.2rem, 9vw, 8.2rem);
+  font-size: clamp(4rem, 8.2vw, 7rem);
   line-height: 1;
   font-weight: 700;
   text-transform: lowercase;
@@ -236,7 +246,7 @@ img {
 
 .hero-main {
   font-family: "Barlow Condensed", sans-serif;
-  font-size: clamp(6rem, 16vw, 15rem);
+  font-size: clamp(5rem, 13vw, 11.5rem);
   font-weight: 700;
   letter-spacing: -0.035em;
   text-transform: lowercase;
@@ -245,17 +255,21 @@ img {
 .hero-sub {
   align-self: flex-end;
   font-family: "Barlow Condensed", sans-serif;
-  font-size: clamp(2rem, 4.8vw, 5rem);
+  font-size: clamp(1.8rem, 4vw, 4.2rem);
   font-weight: 600;
   letter-spacing: 0.1em;
 }
 
 .section {
-  padding: clamp(72px, 10vw, 132px) 0;
+  padding: clamp(84px, 10vw, 136px) 0;
 }
 
 .section-light {
   background: var(--bg);
+}
+
+.services-inner .section-title {
+  margin-bottom: clamp(28px, 3.2vw, 38px);
 }
 
 .section-title {
@@ -276,7 +290,7 @@ img {
 }
 
 .service-grid {
-  margin-top: clamp(36px, 5vw, 58px);
+  margin-top: clamp(12px, 2vw, 18px);
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
@@ -299,7 +313,7 @@ img {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.72));
+    linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.74));
 }
 
 .service-card span {
@@ -309,6 +323,9 @@ img {
   font-size: clamp(2.2rem, 3.7vw, 4rem);
   line-height: 0.88;
   font-weight: 600;
+  min-height: 2.1em;
+  display: flex;
+  align-items: flex-end;
 }
 
 .card-brand {
@@ -359,6 +376,12 @@ img {
   background: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.2));
 }
 
+.band-overlay-strong {
+  background:
+    linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.42)),
+    radial-gradient(circle at center, rgba(0,0,0,0.04), rgba(0,0,0,0.28));
+}
+
 .band-city .band-image {
   background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80");
 }
@@ -370,27 +393,33 @@ img {
 .band-label {
   position: relative;
   z-index: 1;
-  color: rgba(255, 255, 255, 0.86);
-  font-size: clamp(2.4rem, 4vw, 4.8rem);
+  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(2.6rem, 4.1vw, 5rem);
   font-weight: 500;
   text-align: center;
+  text-shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
+}
+
+.band-label-panel {
+  padding: 12px 20px;
+  background: rgba(0, 0, 0, 0.18);
 }
 
 .statement-grid,
 .faq-grid {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.35fr);
-  gap: 32px;
+  gap: 40px;
   align-items: start;
 }
 
 .statement-right p,
 .faq-items p {
   margin: 0;
-  max-width: 720px;
+  max-width: 780px;
   color: var(--text);
-  font-size: clamp(1rem, 1.35vw, 1.18rem);
-  line-height: 1.75;
+  font-size: clamp(1.08rem, 1.5vw, 1.28rem);
+  line-height: 1.8;
 }
 
 .signup-inner {
@@ -422,14 +451,19 @@ img {
 
 .signup-form input,
 .signup-form button {
-  min-height: 52px;
+  min-height: 54px;
   border-radius: 0;
 }
 
 .signup-form input {
   padding: 0 16px;
-  border: 1px solid rgba(17, 17, 17, 0.12);
-  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--line-strong);
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--text);
+}
+
+.signup-form input::placeholder {
+  color: #666666;
 }
 
 .signup-form button {
@@ -439,9 +473,9 @@ img {
   color: var(--text);
   cursor: pointer;
   font-family: "Barlow Condensed", sans-serif;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .signup-form button:hover {
@@ -460,11 +494,11 @@ img {
 
 .faq-items {
   display: grid;
-  gap: 14px;
+  gap: 16px;
 }
 
 .faq-items details {
-  padding: 18px 0;
+  padding: 20px 0;
   border-top: 1px solid var(--line);
 }
 
@@ -475,8 +509,8 @@ img {
 .faq summary {
   cursor: pointer;
   list-style: none;
-  font-size: 1.32rem;
-  font-weight: 500;
+  font-size: 1.48rem;
+  font-weight: 600;
 }
 
 .faq summary::-webkit-details-marker {
@@ -489,7 +523,7 @@ img {
 }
 
 .site-footer {
-  padding: 42px 0 56px;
+  padding: 72px 0 84px;
   background: #f8f8f8;
 }
 
@@ -497,7 +531,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 28px;
 }
 
 .footer-icon {
@@ -570,11 +604,16 @@ img {
     width: 100%;
   }
 
+  .hero-content {
+    justify-content: center;
+  }
+
   .hero-logo {
     flex-direction: column;
     align-items: center;
     gap: 10px;
     text-align: center;
+    transform: translateY(1vh) scale(0.88);
   }
 
   .hero-wordmark {
@@ -618,5 +657,13 @@ img {
 
   .section {
     padding: 64px 0;
+  }
+
+  .hero-logo {
+    transform: translateY(1vh) scale(0.9);
+  }
+
+  .band-label-panel {
+    padding-inline: 14px;
   }
 }
