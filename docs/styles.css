@@ -524,15 +524,28 @@ img {
 }
 
 .site-footer {
-  padding: 86px 0 104px;
-  background: #f8f8f8;
+  padding: clamp(56px, 8vw, 92px) 0;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.9)),
+    var(--bg-soft);
+  border-top: 1px solid rgba(16, 16, 16, 0.08);
 }
 
 .footer-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr) minmax(240px, 0.8fr);
+  gap: clamp(24px, 3vw, 48px);
+  align-items: start;
+}
+
+.footer-brand-block {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 18px;
+}
+
+.footer-mark {
+  flex-shrink: 0;
 }
 
 .footer-icon {
@@ -548,15 +561,74 @@ img {
   text-transform: lowercase;
 }
 
+.footer-brand-copy,
 .footer-contact,
 .footer-hours {
-  text-align: center;
+  display: grid;
+  gap: 10px;
 }
 
-.site-footer p {
+.footer-kicker,
+.footer-label,
+.footer-location,
+.footer-contact a,
+.footer-hours-list p,
+.footer-hours-list span {
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+}
+
+.footer-kicker {
+  font-size: 1.12rem;
+  font-weight: 600;
+}
+
+.footer-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.footer-location,
+.footer-contact a,
+.footer-hours-list p {
   margin: 0;
-  font-size: 1.04rem;
-  letter-spacing: 0.11em;
+  font-size: 1.02rem;
+  color: var(--text);
+}
+
+.footer-contact a {
+  display: inline-block;
+  word-break: break-word;
+  transition: color 0.2s ease;
+}
+
+.footer-contact a:hover {
+  color: var(--accent);
+}
+
+.footer-hours-list {
+  display: grid;
+  gap: 10px;
+}
+
+.footer-hours-list p {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  gap: 28px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.footer-hours-list p:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.footer-hours-list span:last-child {
+  text-align: right;
 }
 
 @media (max-width: 1100px) {
@@ -570,6 +642,14 @@ img {
 
   .signup-form button {
     grid-column: span 2;
+  }
+
+  .footer-inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-brand-block {
+    grid-column: 1 / -1;
   }
 }
 
@@ -671,5 +751,19 @@ img {
 
   .band-label-panel {
     padding-inline: 16px;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .footer-brand-block {
+    grid-column: auto;
+    align-items: flex-start;
+  }
+
+  .footer-hours-list p {
+    gap: 18px;
   }
 }
