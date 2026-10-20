@@ -1,40 +1,61 @@
 import Link from "next/link";
-import { asset } from "../lib/site";
 export default function SiteFooter() {
   return (
-    <footer className="site-footer">
-      <div className="container footer-inner">
-        <div className="footer-brand-block">
-          <div className="footer-mark">
-            <div className="footer-icon">s</div>
-          </div>
-          <div className="footer-brand-copy">
-            <p className="footer-kicker">Static Pulse</p>
-            <p className="footer-location">Sarnia, Ontario</p>
-          </div>
-        </div>
-        <div className="footer-contact">
-          <p className="footer-label">Contact</p>
-          <a href="mailto:hello@staticpulse.ca">hello@staticpulse.ca</a>
-        </div>
-        <div className="footer-hours">
-          <p className="footer-label">Studio Hours</p>
-          <div className="footer-hours-list">
-            <p>
-              <span>Mon–Wed</span>
-              <span>10–5</span>
-            </p>
-            <p>
-              <span>Thu</span>
-              <span>12–8</span>
-            </p>
-            <p>
-              <span>Fri</span>
-              <span>10–5</span>
-            </p>
-          </div>
-        </div>
+    <footer className="quiet-footer">
+      <div className="quiet-footer-top">
+        <strong>Static Pulse</strong>
+        <nav aria-label="Footer">
+          <a href="#services">Services</a>
+          <a href="#work">Process</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </div>
+      <p className="quiet-footer-note">
+        © 2026 · Fictional concept. Stock photography for illustration.
+      </p>
+      <details className="photo-credits">
+        <summary>Photo credits</summary>
+        <ul>
+          <li>
+            <a
+              href="https://www.pexels.com/photo/portrait-of-a-graphic-artist-in-a-studio-with-posters-on-walls-6620994/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Antoni Shkraba · studio work
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.pexels.com/photo/graphic-designer-making-a-design-5428676/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ivan S · studio sketch
+            </a>
+          </li>
+        </ul>
+        <p>
+          Photography from{" "}
+          <a
+            href="https://www.pexels.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Pexels
+          </a>
+          , used under the{" "}
+          <a
+            href="https://www.pexels.com/license/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Pexels License
+          </a>
+          . The people pictured are not presented as this fictional
+          organisation’s staff or members.
+        </p>
+      </details>
     </footer>
   );
 }

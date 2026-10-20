@@ -1,5 +1,6 @@
 import "./globals.css";
 import "./polish.css";
+import "./image-led.css";
 import Motion from "../components/Motion";
 export const metadata = {
   title: "<div>\n  Static Pulse — Visual Agency Demo\n</div>",

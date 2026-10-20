@@ -84,7 +84,6 @@ export default function SiteHeader() {
             <a href="#top">HOME</a>
             <a href="#services">SERVICES</a>
             <a href="#work">WORK</a>
-            <a href="#faq">FAQ</a>
             <a href="#contact">CONTACT</a>
           </nav>
         </div>
